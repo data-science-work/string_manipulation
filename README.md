@@ -1,14 +1,14 @@
 # String Manipulation Utility
 
-The purpose of this CLI is to manipulate training text data from files and export files to either trex or p2s `training_data.txt` format.
+The purpose of this CLI is to manipulate text data from files and export into a combine file or two files.
 
 ### Development Environment
 
 After forking the project, `cd` to project root and run `pipenv install`. If `pipenv` is not installed on your system, run `pip install pipenv` or whatever package manager you are using on your system such `conda`.
 
-### Trex Format
+### Combined Format
 
-For building LR models utilizing trex, positive and negative sentences are contained in the same file.
+For building LR models utilizing training data combined into one file, positive and negative sentences in the same file.
 
 ```
 complaint1, I don't like this bank.
@@ -17,7 +17,7 @@ none, Great experience so far.
 ...
 ```
 
-For building LR models utilizing p2s, positive and negative sentences are in separate files respectively without labels.
+For building LR models utilizing training data split in two files, positive and negative sentences are in separate files respectively without labels. The name of the file will determine the label.
 
 ```
 This is a positive complaint sentence.
@@ -31,12 +31,4 @@ Another negative complaint sentence.
 ...
 ```
 
-The ultimate goal would be to pass a flag  `-trex` or `-p2s` to let the app know how to export the file, and the directory where the data resides.
-
-### Trex Features:
-
-- Abel to pass how many layers and new positive and negative examples. The utility should update existing `training_data.txt` with the new data on each layer with their respective labels.
-
-### P2S Features:
-
-- Abel to pass new positives and negatives examples and the utility should update existing `pos.txt` and `neg.txt` and normalized them.
+The ultimate goal would be to pass different flags to let the app know how to export the file, and the directory where the data resides.
