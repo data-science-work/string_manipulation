@@ -3,7 +3,11 @@
 
 The purpose of this CLI is to manipulate training text data from files and export files to either trex or p2s `training_data.txt` format.
 
-#### Trex Format
+### Development Environment
+
+After forking the project, `cd` to project root and run `pipenv install`. If `pipenv` is not installed on your system, run `pip install pipenv` or whatever package manager you are using on your system such `conda`.
+
+### Trex Format
 
 For building LR models utilizing trex, positive and negative sentences are contained in the same file.
 
