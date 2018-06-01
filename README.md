@@ -1,5 +1,4 @@
 # String Manipulation Utility
-<hr>
 
 The purpose of this CLI is to manipulate training text data from files and export files to either trex or p2s `training_data.txt` format.
 
